@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex">
+<title>Editorial board | Scifiniti Publishing</title>
+<link rel="preconnect" href="https://script.google.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#003462;--red:#FC3441;--ink:#1F2A37;--muted:#4A5563;--line:#DCE4EE;--field:#7B90A8;--tint:#EEF3F9;--bg:#F5F8FC;--err:#B3261E;--ok:#1E6B3A;
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans);-webkit-text-size-adjust:100%}
+  .wrap{max-width:640px;margin:0 auto;padding:16px}
+  .mast{display:flex;gap:14px;align-items:center;padding:14px;background:var(--navy);color:#fff;border-bottom:4px solid var(--red);border-radius:10px 10px 0 0}
+  .coverbox{flex:none;width:80px;aspect-ratio:1240/1754;border-radius:4px;background:#0E4A80;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+  .cover{display:block;width:100%;height:100%;object-fit:cover}
+  .logo{display:block;width:96px;height:auto;margin:0 0 10px}
+  .kick{margin:0;font-size:13px;color:#C9D6E8}
+  .jn{margin:2px 0 0;font-size:19px;line-height:1.25;font-weight:bold}
+  .card{padding:24px 16px;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 10px 10px}
+  h1{margin:0;font:600 26px/1.2 var(--serif);color:var(--navy)}
+  h1:focus{outline:none}
+  h2{margin:28px 0 10px;font-size:17px;color:var(--navy)}
+  h2.sec{display:flex;align-items:center;gap:10px;margin:32px 0 4px;padding-top:20px;border-top:1px solid var(--line)}
+  h2.sec span{display:inline-grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:var(--tint);color:var(--navy);font-size:14px}
+  .who{margin:8px 0 0;color:var(--muted)}
+  .link{padding:0;border:0;background:none;color:var(--navy);font:inherit;font-weight:bold;text-decoration:underline;cursor:pointer}
+  a{color:var(--navy)}
+  .inv{display:flex;gap:14px;align-items:center;margin:18px 0 0;padding:14px 16px;background:var(--tint);border-radius:8px}
+  .inv p{margin:0}
+  .inv .label{font-size:13px;color:var(--muted)}
+  .inv .name{font:500 18px/1.3 var(--serif);color:var(--ink)}
+  .inv .aff{font-size:14px;color:var(--muted)}
+  .board{flex:none;display:flex}
+  .board i{display:block;width:30px;height:30px;margin-left:-8px;border:2px solid var(--tint);border-radius:50%;background:#2D5B8A}
+  .board i:first-child{margin-left:0;background:var(--navy)}
+  .board i:nth-child(2){background:#1F4C7A}
+  .board i.you{display:grid;place-items:center;background:#fff;border:2px dashed var(--red);color:var(--red);font:bold 15px/1 var(--sans);font-style:normal}
+  ul.plain{margin:0;padding:0;list-style:none}
+  ul.plain li{position:relative;margin:0 0 8px;padding:0 0 0 26px}
+  ul.plain li::before{content:"";position:absolute;left:4px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--red)}
+  ul.ticks li::before{left:7px;top:4px;width:6px;height:12px;border-radius:0;background:none;border:solid var(--navy);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+  .facts{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+  .facts span{padding:6px 12px;border-radius:999px;background:var(--tint);color:var(--navy);font-size:14px;font-weight:bold}
+  .choices{display:grid;gap:10px;margin:28px 0 0}
+  .choice{min-height:52px;padding:14px 18px;border:2px solid var(--navy);border-radius:8px;background:#fff;color:var(--navy);font:bold 16px var(--sans);text-align:left;cursor:pointer}
+  .choice.main{background:var(--navy);color:#fff}
+  .ask{margin:14px 0 0;text-align:center;color:var(--muted)}
+  details.faq{margin:24px 0 0;border-top:1px solid var(--line)}
+  details.faq summary{min-height:44px;padding:12px 0;font-weight:bold;color:var(--navy);cursor:pointer}
+  details.faq p{margin:0 0 10px}
+  fieldset{margin:16px 0 0;padding:0;border:0;min-width:0}
+  legend{margin:0 0 8px;padding:0;font-weight:bold}
+  .soft{font-weight:normal;color:var(--muted)}
+  .opt{display:flex;align-items:flex-start;gap:12px;min-height:48px;margin:0 0 8px;padding:12px 14px;border:1px solid var(--field);border-radius:8px;background:#fff;color:var(--ink);cursor:pointer}
+  .opt input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--navy)}
+  .opt:has(input:checked){padding:11px 13px;border:2px solid var(--navy);background:var(--tint);color:var(--navy);font-weight:bold}
+  .opt:has(input:focus-visible),.seg label:has(input:focus-visible){outline:3px solid var(--red);outline-offset:2px}
+  .opt input:focus-visible,.seg input:focus-visible{outline:none}
+  .sub{margin:-2px 0 10px 46px}
+  .sub p{margin:0 0 6px;font-size:14px;color:var(--muted)}
+  .seg{display:flex;flex-wrap:wrap;gap:8px}
+  .seg label{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border:1px solid var(--field);border-radius:999px;background:#fff;font-size:14px;cursor:pointer}
+  .seg input{position:absolute;opacity:0;width:1px;height:1px}
+  .seg label:has(input:checked){border:2px solid var(--navy);padding:7px 13px;background:var(--tint);color:var(--navy);font-weight:bold}
+  .grid{display:grid;gap:0 14px}
+  .field{margin:16px 0 0}
+  .field label,.field .lbl{display:block;margin:0 0 6px;font-weight:bold}
+  .field input:not([type=checkbox]):not([type=radio]):not([type=file]),.field textarea{display:block;width:100%;padding:12px;border:1px solid var(--field);border-radius:8px;background:#fff;color:var(--ink);font:16px/1.5 var(--sans)}
+  .field textarea{min-height:96px;resize:vertical}
+  [aria-invalid=true]{border:2px solid var(--err)!important}
+  .hint{margin:6px 0 0;font-size:13px;color:var(--muted)}
+  .ferr{display:block;margin:6px 0 0;font-size:14px;font-weight:bold;color:var(--err)}
+  .disclose{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin:12px 0 0;padding:0;border:0;background:none;color:var(--navy);font:bold 15px var(--sans);cursor:pointer}
+  .disclose::before{content:"+";display:inline-grid;place-items:center;width:22px;height:22px;border:2px solid var(--navy);border-radius:50%;font-size:15px;line-height:1}
+  .disclose[aria-expanded=true]::before{content:"\2212"}
+  .drop{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px;border:2px dashed var(--field);border-radius:8px;background:#fff}
+  .drop.has{border-style:solid;border-color:var(--navy);background:var(--tint)}
+  .pick{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border:2px solid var(--navy);border-radius:8px;background:#fff;color:var(--navy);font:bold 15px var(--sans);cursor:pointer}
+  .vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .drop input[type=file]:focus-visible+.pick{outline:3px solid var(--red);outline-offset:2px}
+  .fname{margin:0;overflow-wrap:anywhere}
+  .fname strong{color:var(--navy)}
+  .thumb{display:block;width:64px;height:64px;border-radius:50%;object-fit:cover;background:var(--tint)}
+  .count{margin:6px 0 0;font-size:13px;color:var(--muted);text-align:right}
+  .duties{margin:8px 0 12px;padding:14px 16px;border-left:4px solid var(--navy);background:var(--tint);border-radius:0 8px 8px 0}
+  .duties p{margin:0 0 6px}
+  .notice{margin:12px 0 0;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:14px}
+  .notice p{margin:0 0 8px}
+  .notice p:last-child{margin:0}
+  .errsum{margin:20px 0 0;padding:14px 16px;border:3px solid var(--err);border-radius:8px;background:#fff}
+  .errsum:focus{outline:3px solid var(--red);outline-offset:2px}
+  .errsum h2{margin:0 0 8px;color:var(--err);font-size:16px}
+  .errsum ul{margin:0;padding-left:20px}
+  .errsum a{color:var(--err);font-weight:bold}
+  .go{display:block;width:100%;min-height:52px;margin:28px 0 0;padding:14px 20px;border:0;border-radius:8px;background:var(--navy);color:#fff;font:bold 17px var(--sans);cursor:pointer}
+  .go[disabled]{opacity:.75;cursor:progress}
+  .status{margin:12px 0 0;color:var(--err);font-weight:bold}
+  .back{margin:16px 0 0;text-align:center}
+  :focus-visible{outline:3px solid var(--red);outline-offset:2px}
+  .check{display:grid;place-items:center;width:52px;height:52px;margin:0 0 16px;border-radius:50%;background:var(--navy)}
+  .lead{margin:8px 0 0;font-size:16px}
+  .steps{margin:0;padding:0;list-style:none;counter-reset:s}
+  .steps li{position:relative;margin:0 0 14px;padding:0 0 0 40px;counter-increment:s}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:-2px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--tint);color:var(--navy);font-weight:bold;font-size:14px}
+  .tip{margin:4px 0 0;padding:14px 16px;border-left:4px solid var(--navy);background:var(--tint);border-radius:0 8px 8px 0}
+  .links{margin:24px 0 0;display:flex;flex-wrap:wrap;gap:8px 24px}
+  .foot{margin:16px 0 8px;text-align:center;font-size:13px;color:var(--muted)}
+  .foot a{color:var(--muted)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  [hidden]{display:none!important}
+  @media (min-width:640px){
+    .wrap{padding:32px 16px}
+    .mast{gap:24px;padding:20px 28px}
+    .coverbox{width:132px}
+    .logo{width:120px}
+    .jn{font-size:26px}
+    .card{padding:32px}
+    h1{font-size:32px}
+    .grid.two{grid-template-columns:1fr 1fr}
+    .choices{grid-template-columns:1fr 1fr}
+    .choices .main{grid-column:1/-1}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .pop .check{animation:pop .3s cubic-bezier(.2,.8,.2,1) both}
+    @keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="mast">
+    <div class="coverbox" id="coverbox"><img class="cover" id="cover" alt="" hidden></div>
+    <div>
+      <svg class="logo" role="img" aria-label="Scifiniti Publishing" width="120" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 285"><g><path fill="#FC3441" d="M8.67,121.28c6.77-19.91,20.03-33.95,39.34-42.13,6.99-2.96,14.4-4.5,22.36-4.89-.14,12.91,2.05,25.26,7.68,37.33-1.96.19-3.75.38-5.55.53-8.02.64-15.17,3.39-20.98,9.06-5.3,5.18-8.09,11.55-8.46,18.99-.49,9.94,2.49,18.57,9.93,25.29,8.03,7.26,17.42,9.05,27.88,6.4,15.45-3.91,26.97-13.41,36.41-25.64,7.39-9.57,14.17-19.62,21.33-29.37,9.5-12.95,20.76-24.03,35.13-31.52,9.11-4.75,18.76-8.09,28.97-9.61,3.74-.56,7.48-1.28,11.24-1.41,6.07-.21,11.93,1.09,17.81,2.68,11.97,3.23,21.97,9.54,30.45,18.38,10.14,10.57,16.43,23.15,18.2,37.68,3.3,27.06-6.46,48.77-28.08,65.06-9.98,7.52-21.59,11.27-33.99,12.54-.74.08-1.5,0-2.53,0-1.63-12.74-4.44-25.11-10.36-37.16,2.26-.21,4.37-.41,6.49-.6,7.59-.66,14.65-2.82,20.78-7.47,7.36-5.59,11.11-13.09,10.94-22.31-.25-13.24-6.28-23.02-18.34-28.74-5.97-2.83-12.26-3.26-18.68-1.55-13.07,3.5-23.09,11.62-31.43,21.73-8.01,9.71-15.36,19.99-22.85,30.12-8.67,11.73-17.92,22.88-29.79,31.58-10.05,7.37-21.26,11.96-33.57,13.74-18.19,2.62-35.32-.73-51.11-10.05-14.19-8.37-24.2-20.43-29.34-36.15-3.11-9.52-4.28-19.37-2.76-29.39.3-1.98,2.09-10.81,2.88-13.12Z"/><path fill="#FC3441" d="M211.26,69.84c-12.79,1.69-25.17,4.51-37.34,10.47-.11-2-.24-3.6-.28-5.2-.21-7.39-2.24-14.29-6.34-20.39-5.04-7.49-12.12-11.85-21.31-12.45-13.87-.91-25.07,5.47-30.91,17.86-2.81,5.97-3.24,12.23-1.67,18.67,3.42,14,11.03,25.3,22.03,34.53-7.51,10.61-15.01,21.19-22.77,32.15-3.06-2.66-5.78-4.96-8.41-7.34-8.31-7.5-15.58-15.85-20.89-25.8-4.77-8.94-7.51-18.5-8.28-28.55-.9-11.77.2-23.38,4.56-34.46,5.63-14.3,14.65-25.93,27.72-34.27,10.14-6.47,21.29-9.69,33.21-10.5,1.25-.08,9.35-.01,11.96.66,24.63,4.28,42.51,17.42,53.12,40.25,3.59,7.72,5.92,19.81,5.6,24.36Z"/><path fill="#FC3441" d="M150.81,174.14c7.87-10.69,15.58-21.16,23.6-32.06,3.34,3.11,6.58,5.94,9.61,8.97,9.27,9.3,16.47,20.03,20.98,32.38,3.82,10.45,6.6,21.2,6.38,32.44-.15,7.63-2.19,14.93-4.97,22-.31.8-3.82,8.72-8.96,15.68-7.27,9.22-16.15,16.32-26.96,21.04-9.32,4.07-19.06,6.38-29.16,5.76-27.99-1.71-48.39-15.06-60.53-40.62-3.1-6.53-4.59-13.46-5.64-20.52-.18-1.21-.03-2.48-.03-3.54,6.35-.69,12.68-.94,18.82-2.18,6.11-1.24,12.01-3.48,18.13-5.32.47,3.12.77,6.63,1.57,10.01,1.99,8.41,6.12,15.46,13.67,20.17,7.35,4.59,15.28,5.44,23.51,3.48,9.21-2.2,16.1-7.59,20.2-16.19,3.2-6.71,3.59-13.71,1.54-20.88-3.37-11.78-10.89-20.69-19.67-28.74-.67-.62-1.36-1.22-2.1-1.89Z"/></g><g><g><path fill="#FFFFFF" d="M375.51,119.51c2.09,9.19,8.68,13.22,19.28,13.22s15.09-4.17,15.09-10.87c0-7.45-4.41-10.69-20.07-14.33-24.92-5.85-31.08-14.91-31.08-27.27,0-15.96,11.94-26.79,33.61-26.79,24.31,0,33.99,13.07,35.31,26.46h-19.95c-.96-5.63-4.07-11.75-15.87-11.75-8.04,0-12.88,3.32-12.88,9.82s3.89,8.95,18.68,12.38c26.63,6.28,32.47,16.18,32.47,29.09,0,16.72-12.65,28.19-36.85,28.19s-35.48-11.44-37.67-28.13h19.95Z"/><path fill="#FFFFFF" d="M530.25,118.12c-3.68,17.08-16.56,29.52-39.49,29.52-29.03,0-42.76-20.55-42.76-46.59s14.16-47.59,43.71-47.59c24.38,0,36.2,14.31,38.43,29.61h-19.8c-1.91-7.06-6.82-14.09-19.27-14.09-16.33,0-22.63,14.69-22.63,31.35,0,15.48,5.47,31.79,23.16,31.79,12.92,0,17-8.66,18.72-14h19.91Z"/><path fill="#FFFFFF" d="M571.92,53.46v94.18h-19.8V53.46h19.8Z"/><path fill="#FFFFFF" d="M600.46,53.46h63.91v16.23h-44.58v23.76h41.76v16.23h-41.76v37.97h-19.33V53.46Z"/><path fill="#FFFFFF" d="M705.51,53.46v94.18h-19.8V53.46h19.8Z"/><path fill="#FFFFFF" d="M734.05,147.64V53.46h24.53c11.44,20.56,32.57,58.96,36.78,68.94h.25c-1.03-9.56-1.01-25.45-1.01-40.48v-28.46h17.94v94.18h-23.27c-9.84-17.89-33.26-63.11-37.79-73.68h-.25c.66,8.01.88,28.14.88,44.54v29.14h-18.06Z"/><path fill="#FFFFFF" d="M860.88,53.46v94.18h-19.8V53.46h19.8Z"/><path fill="#FFFFFF" d="M908.9,69.69h-27.82v-16.23h75.35v16.23h-27.72v77.95h-19.81v-77.95Z"/><path fill="#FFFFFF" d="M995.13,53.46v94.18h-19.8V53.46h19.8Z"/></g><g><path fill="#FFFFFF" d="M355.56,185.11h17.4c8.92,0,15.02,4.98,15.02,13.33,0,8.93-6.43,13.66-15.38,13.66h-10.91v18.82h-6.12v-45.82ZM361.68,206.98h10.61c6.27,0,9.42-3.06,9.42-8.39s-3.81-8.37-9.18-8.37h-10.85v16.77Z"/><path fill="#FFFFFF" d="M404.86,185.11v27.57c0,10.82,5.93,13.75,11.8,13.75,6.86,0,11.71-3.16,11.71-13.75v-27.57h6.12v27.26c0,14.87-8.22,19.13-17.95,19.13s-17.83-4.61-17.83-18.7v-27.69h6.16Z"/><path fill="#FFFFFF" d="M448.5,185.11h17.58c9.69,0,14.2,5.09,14.2,11.44,0,5.33-3.06,8.79-6.57,9.98,3.2,1.01,8.08,4.24,8.08,10.97,0,8.63-6.58,13.42-15.27,13.42h-18.01v-45.82ZM464.92,204.16c6.64,0,9.22-2.61,9.22-7.08,0-4.05-2.9-6.95-8.28-6.95h-11.4v14.03h10.46ZM454.47,225.9h11.31c5.75,0,9.75-2.7,9.75-8.41,0-4.98-3.19-8.32-10.92-8.32h-10.15v16.73Z"/><path fill="#FFFFFF" d="M493.29,185.11h6.08v40.61h23.9l-.85,5.2h-29.13v-45.82Z"/><path fill="#FFFFFF" d="M538.03,185.11v45.82h-6.08v-45.82h6.08Z"/><path fill="#FFFFFF" d="M554.92,218.17c1.24,5.5,5,8.46,11.64,8.46,7.15,0,9.98-3.35,9.98-7.68,0-4.6-2.26-7.17-11.44-9.39-10.79-2.62-14.54-6.32-14.54-12.76,0-6.8,5.02-12.35,15.25-12.35,10.91,0,15.4,6.31,16.01,12.32h-6.18c-.82-4.08-3.37-7.42-10.05-7.42-5.58,0-8.71,2.51-8.71,6.88s2.58,6,10.61,7.94c13.07,3.18,15.37,8.26,15.37,14.15,0,7.39-5.47,13.18-16.68,13.18s-16.48-6.3-17.43-13.33h6.19Z"/><path fill="#FFFFFF" d="M593.87,185.11h6.08v19.13h23.88v-19.13h6.07v45.82h-6.07v-21.48h-23.88v21.48h-6.08v-45.82Z"/><path fill="#FFFFFF" d="M650.54,185.11v45.82h-6.08v-45.82h6.08Z"/><path fill="#FFFFFF" d="M665.07,230.92v-45.82h8.04c6.57,10.71,20.87,33.5,23.44,38.48h.09c-.44-5.88-.4-13.11-.4-20.59v-17.89h5.75v45.82h-7.55c-6.05-9.94-20.96-34.46-23.83-39.6h-.09c.33,5.22.33,12.98.33,21.25v18.35h-5.77Z"/><path fill="#FFFFFF" d="M753.34,230.92h-4.66c-.31-.88-.49-2.92-.58-6.21-1.99,3.25-5.94,6.83-14.23,6.83-13.21,0-20.23-10.03-20.23-23.06,0-13.72,7.52-24.03,21.35-24.03,10.64,0,17.34,5.76,18.65,13.95h-6.07c-1.55-5.12-5.24-8.89-12.71-8.89-10.64,0-14.86,8.49-14.86,18.67,0,9.44,4.26,18.24,14.61,18.24s12.82-6.83,12.82-14.57v-.48h-12.9v-5.2h18.82v24.74Z"/></g></g></svg>
+      <p class="kick">Editorial board</p>
+      <p class="jn" id="jn">Scifiniti Publishing</p>
+    </div>
+  </header>
+
+  <section class="card" id="form-view" aria-labelledby="h">
+    <h1 id="h">Join the Editorial Board</h1>
+    <p class="who" id="who" hidden><span id="who-t"></span> <button type="button" class="link" id="who-change">Change</button></p>
+
+    <div class="inv" id="inv" hidden>
+      <div class="board" aria-hidden="true"><i></i><i></i><i></i><i class="you">+</i></div>
+      <div>
+        <p class="label">Invitation from</p>
+        <p class="name" id="eic"></p>
+        <p class="aff" id="eic-aff"></p>
+      </div>
+    </div>
+
+    <!-- what the board does: shown before the choice and above the application -->
+    <div id="about">
+      <h2>What board members do</h2>
+      <ul class="plain">
+        <li>Review 2 to 3 manuscripts a year in your field, and suggest reviewers for others.</li>
+        <li>Contribute or invite one manuscript a year.</li>
+        <li>Share the journal with colleagues, at conferences and on social media.</li>
+      </ul>
+      <div class="facts"><span>Term: 2 years, renewable</span><span>No fee to join</span></div>
+      <p class="hint"><a href="https://www.scifiniti.com/editors" target="_blank" rel="noopener">Read Scifiniti's guidelines for editors</a></p>
+      <div id="perks">
+        <h2>What you receive</h2>
+        <ul class="plain ticks">
+          <li>Free open access publication of your own research articles.</li>
+          <li>Free English editing and graphics enhancement when you publish in any Scifiniti journal.</li>
+          <li>Free English editing for one of your papers in any international journal.</li>
+          <li>Your profile on the journal's editorial board page.</li>
+          <li>A certificate of acknowledgement when you join.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="choose" hidden>
+      <div class="choices">
+        <button type="button" class="choice main" data-go="apply">Apply to join the board</button>
+        <button type="button" class="choice" data-go="decline">Not now</button>
+        <button type="button" class="choice" data-go="recommend">Recommend a colleague</button>
+      </div>
+      <p class="ask"><button type="button" class="link" data-go="msg">Ask the editorial office a question</button></p>
+      <details class="faq">
+        <summary>Questions people ask</summary>
+        <p><strong>Is there a fee?</strong> No, joining the board is free.</p>
+        <p><strong>How are members chosen?</strong> The Editor-in-Chief reviews each application against the board criteria: a PhD, a post at a university, research institute or company, and a publication record in the journal's field.</p>
+        <p><strong>How long does it take?</strong> The editorial office writes to you with the decision <span class="dtime">within three weeks</span>.</p>
+        <p><strong>Who sees my CV?</strong> The editorial office and the Editor-in-Chief.</p>
+      </details>
+    </div>
+
+    <form id="f" novalidate hidden>
+      <div class="errsum" id="errsum" tabindex="-1" role="alert" hidden>
+        <h2>Please check these</h2>
+        <ul id="errlist"></ul>
+      </div>
+
+      <!-- apply -->
+      <div id="apply" hidden>
+        <h2 class="sec"><span aria-hidden="true">1</span>About you</h2>
+        <fieldset>
+          <legend>Title <span class="soft">(optional)</span></legend>
+          <div class="seg">
+            <label><input type="radio" name="title" value="Prof."> Prof.</label>
+            <label><input type="radio" name="title" value="Assoc. Prof."> Assoc. Prof.</label><!-- slop-ok: academic title -->
+            <label><input type="radio" name="title" value="Asst. Prof."> Asst. Prof.</label><!-- slop-ok: academic title -->
+            <label><input type="radio" name="title" value="Dr."> Dr.</label>
+          </div>
+        </fieldset>
+        <div class="grid two">
+          <div class="field"><label for="fn">First name</label><input id="fn" autocomplete="given-name" maxlength="60"></div>
+          <div class="field"><label for="ln">Last name</label><input id="ln" autocomplete="family-name" maxlength="60"></div>
+        </div>
+        <div class="field"><label for="pos">Current position</label><input id="pos" maxlength="120" autocomplete="organization-title" aria-describedby="pos-h"><p class="hint" id="pos-h">For example, Associate Professor</p></div>
+        <div class="field"><label for="ins">Institution</label><input id="ins" maxlength="200" autocomplete="organization"></div>
+        <div class="field"><label for="dep">Department <span class="soft">(optional)</span></label><input id="dep" maxlength="160"></div>
+        <div class="grid two">
+          <div class="field"><label for="city">City <span class="soft">(optional)</span></label><input id="city" maxlength="80" autocomplete="address-level2"></div>
+          <div class="field"><label for="ctry">Country</label><input id="ctry" maxlength="80" list="countries" autocomplete="country-name"></div>
+        </div>
+        <div class="field" id="me" hidden>
+          <label for="em">Your e-mail</label>
+          <input id="em" type="email" inputmode="email" autocomplete="email" aria-describedby="emh">
+          <p class="hint" id="emh">The editorial office writes to you at this address.</p>
+        </div>
+
+        <h2 class="sec"><span aria-hidden="true">2</span>Your work</h2>
+        <fieldset id="areas-fs">
+          <legend>Which areas of the journal do you work in? <span class="soft">Choose one or more.</span></legend>
+          <div id="areas"></div>
+        </fieldset>
+        <div class="field"><label for="kw">Keywords <span class="soft">(optional)</span></label><input id="kw" maxlength="300" aria-describedby="kw-h"><p class="hint" id="kw-h">Up to 6, separated by commas</p></div>
+        <div class="grid two">
+          <div class="field"><label for="orcid">ORCID iD <span class="soft">(optional)</span></label><input id="orcid" maxlength="40" inputmode="numeric" autocomplete="off" aria-describedby="orcid-h"><p class="hint" id="orcid-h">Like 0000-0002-1825-0097</p></div>
+          <div class="field"><label for="sco">Scopus Author ID <span class="soft">(optional)</span></label><input id="sco" maxlength="20" inputmode="numeric" autocomplete="off" aria-describedby="sco-h"><p class="hint" id="sco-h">The number at the end of your Scopus profile address</p></div>
+        </div>
+        <div class="field"><label for="gs">Google Scholar profile <span class="soft">(optional)</span></label><input id="gs" type="url" maxlength="300" placeholder="https://scholar.google.com/citations?user=…"></div>
+        <div class="field"><label for="pp">Institutional profile page <span class="soft">(optional)</span></label><input id="pp" type="url" maxlength="300" placeholder="https://"></div>
+
+        <h2 class="sec"><span aria-hidden="true">3</span>Your CV and photo</h2>
+        <div class="field">
+          <span class="lbl" id="cv-l">CV</span>
+          <div class="drop" id="cv-drop">
+            <input class="vh" type="file" id="cv" accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-labelledby="cv-l cv-btn" aria-describedby="cv-h">
+            <label class="pick" for="cv" id="cv-btn">Choose a file</label>
+            <p class="fname" id="cv-name">No file chosen</p>
+          </div>
+          <p class="hint" id="cv-h">PDF or Word (.docx), up to 5 MB</p>
+        </div>
+        <div class="field">
+          <span class="lbl" id="ph-l">Photo <span class="soft">(optional)</span></span>
+          <div class="drop" id="ph-drop">
+            <img class="thumb" id="ph-thumb" alt="" hidden>
+            <input class="vh" type="file" id="ph" accept="image/jpeg,image/png,image/heic,image/heif,image/webp" aria-labelledby="ph-l ph-btn" aria-describedby="ph-h">
+            <label class="pick" for="ph" id="ph-btn">Choose a photo</label>
+            <p class="fname" id="ph-name">No photo chosen</p>
+          </div>
+          <p class="hint" id="ph-h">A portrait for the board page. We resize it before sending.</p>
+        </div>
+        <div class="field"><label for="bio">Short bio <span class="soft">(optional)</span></label>
+          <textarea id="bio" maxlength="1000" rows="4" aria-describedby="bio-h bio-c"></textarea>
+          <p class="hint" id="bio-h">2 or 3 sentences for the board page, written in the third person</p>
+          <p class="count" id="bio-c" aria-live="polite">0 of 1,000 characters</p>
+        </div>
+        <label class="opt" id="listing-opt" hidden><input type="checkbox" id="listing"> <span>If I am appointed, show my photo and short bio on the journal's board page.</span></label>
+
+        <h2 class="sec"><span aria-hidden="true">4</span>Confirm</h2>
+        <div class="duties">
+          <p><strong>As a board member you would:</strong></p>
+          <ul class="plain">
+            <li>review 2 to 3 manuscripts a year and suggest reviewers;</li>
+            <li>contribute or invite one manuscript a year;</li>
+            <li>share the journal with your colleagues.</li>
+          </ul>
+          <p class="soft">The term is 2 years, renewable. There is no fee to join.</p>
+        </div>
+        <label class="opt"><input type="checkbox" id="confirm"> <span>I can take on these tasks for a 2-year term.</span></label>
+        <fieldset>
+          <legend>I am also interested in <span class="soft">(optional)</span></legend>
+          <label class="opt"><input type="checkbox" name="interest" value="special"> <span>Guest-editing a special issue</span></label>
+          <label class="opt"><input type="checkbox" name="interest" value="larger"> <span>A larger editorial role later, for example Associate Editor</span></label>
+        </fieldset>
+        <div class="notice" id="privacy-text">
+          <p><strong>How we use your information</strong></p>
+          <p>Scifiniti Publishing (MBZ City, Abu Dhabi, UAE) uses what you send to consider you for the editorial board of <span class="jname">the journal</span>. The editorial office and the Editor-in-Chief read it. It is stored in Scifiniti's Google Workspace.</p>
+          <p>If you are appointed, your name, position, institution and country appear on the journal's editorial board page. Your photo and short bio appear only if you tick the box above.</p>
+          <p>If you are not appointed, we keep your application for up to 2 years so the editors can consider you for later openings. You can ask us at any time to show, correct or delete it: write to <a href="mailto:info@scifiniti.com">info@scifiniti.com</a>.</p>
+          <p>We found your e-mail address as the corresponding author of your published papers. <a href="https://www.scifiniti.com/privacy-policy" target="_blank" rel="noopener">Privacy policy</a></p>
+        </div>
+        <label class="opt"><input type="checkbox" id="privacy"> <span>I have read how my information is used.</span></label>
+      </div>
+
+      <!-- decline -->
+      <div id="decline" hidden>
+        <fieldset>
+          <legend>Reason <span class="soft">(optional)</span></legend>
+          <label class="opt"><input type="radio" name="reason" value="time"> <span>No time at the moment</span></label>
+          <div class="sub" id="later" hidden>
+            <p id="later-l">Ask me again in</p>
+            <div class="seg" role="radiogroup" aria-labelledby="later-l">
+              <label><input type="radio" name="later" value="6" checked> 6 months</label>
+              <label><input type="radio" name="later" value="12"> 12 months</label>
+            </div>
+          </div>
+          <label class="opt"><input type="radio" name="reason" value="field"> <span>The journal is outside my field</span></label>
+          <label class="opt"><input type="radio" name="reason" value="boards"> <span>I already serve on enough editorial boards</span></label>
+          <label class="opt"><input type="radio" name="reason" value="other"> <span>Other</span></label>
+          <div class="field sub" id="other-field" hidden><label for="ot">Please tell us the reason <span class="soft">(optional)</span></label><input id="ot" maxlength="200" autocomplete="off"></div>
+        </fieldset>
+        <button type="button" class="disclose" id="rec-toggle" aria-expanded="false" aria-controls="rec-fields">Recommend a colleague instead</button>
+      </div>
+
+      <!-- recommend (also opened from decline) -->
+      <div id="rec-fields" hidden>
+        <p class="lead" id="rec-intro" hidden>Who would be a good board member for <span class="jname">the journal</span>?</p>
+        <div class="field"><label for="rn">Colleague's name</label><input id="rn" maxlength="120" autocomplete="off"></div>
+        <div class="field"><label for="re">Colleague's e-mail</label><input id="re" type="email" inputmode="email" maxlength="120" autocomplete="off"></div>
+        <div class="field"><label for="ri">Their institution <span class="soft">(optional)</span></label><input id="ri" maxlength="200" autocomplete="off"></div>
+      </div>
+
+      <div class="field" id="me2" hidden>
+        <label for="em2">Your e-mail</label>
+        <input id="em2" type="email" inputmode="email" autocomplete="email" aria-describedby="emh2">
+        <p class="hint" id="emh2">The editorial office writes to you at this address.</p>
+      </div>
+
+      <button type="button" class="disclose" id="msg-toggle" aria-expanded="false" aria-controls="msg-field">Add a message</button>
+      <div class="field" id="msg-field" hidden>
+        <label for="m" id="ml">Message to the editorial office (optional)</label>
+        <textarea id="m" rows="4" maxlength="4000"></textarea>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" tabindex="-1" autocomplete="off"></div>
+
+      <button class="go" id="go" type="submit">Send my application</button>
+      <p class="status" id="st" role="alert" hidden></p>
+      <p class="back"><button type="button" class="link" id="back">Back to the invitation</button></p>
+    </form>
+  </section>
+
+  <section class="card" id="done" hidden aria-labelledby="dh">
+    <div class="check" id="check" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+    </div>
+    <h1 id="dh" tabindex="-1">Thank you</h1>
+    <p class="lead" id="dl"></p>
+    <p class="lead" id="dl2" hidden></p>
+    <div id="next" hidden>
+      <h2>What happens next</h2>
+      <ol class="steps">
+        <li>The Editor-in-Chief, <span id="eic2"></span>, reviews your profile and CV.</li>
+        <li>The editorial office writes to you with the decision <span class="dtime">within three weeks</span>, from <strong class="jmail">the journal's address</strong>.</li>
+        <li>If you are appointed, you receive a certificate and your profile appears on the journal's editorial board page.</li>
+      </ol>
+      <p class="tip">Add <strong class="jmail">the journal's address</strong> to your contacts so our reply reaches your inbox and not your spam folder.</p>
+    </div>
+    <p class="links"><a id="bl" href="https://www.scifiniti.com/editors" hidden>See the current board</a><a id="jl" href="https://www.scifiniti.com">Visit Scifiniti Publishing</a></p>
+  </section>
+
+  <p class="foot">Scifiniti Publishing, MBZ City, Abu Dhabi, UAE · <a href="mailto:info@scifiniti.com">info@scifiniti.com</a> · <a href="https://www.scifiniti.com/privacy-policy">Privacy policy</a></p>
+</main>
+<datalist id="countries"></datalist>
+<script>
+(function () {
+  var API = 'https://script.google.com/macros/s/__DEPLOYMENT_ID__/exec';
+  var SITE = /^https:\/\/(www\.)?scifiniti\.com\//;
+  var EMAIL_RE = /^[^\s@<>"',;]+@[^\s@<>"',;]+\.[^\s@<>"',;]{2,}$/;
+  var CODE_RE = /^[a-z0-9-]{3,80}$/;
+  var ORCID_RE = /^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$/;
+  var URL_RE = /^https?:\/\/[^\s<>"']{3,300}$/i;
+  var MAX_CV = 5 * 1024 * 1024, PHOTO_PX = 800;
+  var DECISION = 'within three weeks';
+  var COUNTRIES = 'Afghanistan|Albania|Algeria|Andorra|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahrain|Bangladesh|Belarus|Belgium|Benin|Bhutan|Bolivia|Bosnia and Herzegovina|Botswana|Brazil|Brunei|Bulgaria|Burkina Faso|Burundi|Cambodia|Cameroon|Canada|Chad|Chile|China|Colombia|Congo|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Eritrea|Estonia|Eswatini|Ethiopia|Fiji|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Lesotho|Liberia|Libya|Lithuania|Luxembourg|Macau|Madagascar|Malawi|Malaysia|Maldives|Mali|Malta|Mauritania|Mauritius|Mexico|Moldova|Monaco|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|North Macedonia|Norway|Oman|Pakistan|Palestine|Panama|Papua New Guinea|Paraguay|Peru|Philippines|Poland|Portugal|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emirates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe'.split('|');
+  var V = {
+    choose: { h: 'Join the Editorial Board' },
+    apply: { h: 'Apply to join the board', btn: 'Send my application', ml: 'Message to the editorial office (optional)' },
+    decline: { h: 'Not now', btn: 'Send my answer', ml: 'Message to the editorial office (optional)' },
+    recommend: { h: 'Recommend a colleague', btn: 'Send recommendation', ml: 'Why they would be a good board member (optional)' },
+    msg: { h: 'Ask a question', btn: 'Send question', ml: 'Your question' }
+  };
+  var $ = function (id) { return document.getElementById(id); };
+  var S = { answer: 'choose', j: '', email: '', linkEmail: '', first: '', last: '', journal: '', eic: '', mail: '', areas: [] };
+  var files = { cv: null, photo: null };
+  var busy = false;
+
+  // Query and #fragment, decoded without turning "+" into a space (e-mail addresses can contain "+").
+  function parse(s) {
+    var o = {};
+    String(s || '').replace(/^[?#]/, '').split('&').forEach(function (pair) {
+      var i = pair.indexOf('='); if (i < 1) return;
+      try { o[pair.slice(0, i)] = decodeURIComponent(pair.slice(i + 1)); } catch (e) { /* skip a malformed part */ }
+    });
+    return o;
+  }
+  // Zoho test sends put FNAME / LNAME / EMAIL where the merge tags were; an unfilled tag still contains "$[".
+  function keep(v) { v = String(v || '').trim(); return !v || /^(guest|customer|fname|lname|email)$/i.test(v) || v.indexOf('$[') >= 0 ? '' : v; }
+  function withTimeout(ms) { var c = window.AbortController ? new AbortController() : null; if (c) setTimeout(function () { c.abort(); }, ms); return c ? c.signal : undefined; }
+  function checked(name) { var x = document.querySelector('input[name=' + name + ']:checked'); return x ? x.value : ''; }
+  function all(name) { return Array.prototype.map.call(document.querySelectorAll('input[name=' + name + ']:checked'), function (x) { return x.value; }); }
+  function val(id) { return $(id).value.trim(); }
+  function each(sel, fn) { Array.prototype.forEach.call(document.querySelectorAll(sel), fn); }
+  function size(n) { return n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB'; }
+
+  function view(a) {
+    S.answer = a;
+    var v = V[a];
+    $('h').textContent = v.h;
+    $('choose').hidden = a !== 'choose';
+    $('about').hidden = a !== 'choose';
+    $('inv').hidden = (a !== 'choose' && a !== 'apply') || !S.eic;
+    $('f').hidden = a === 'choose';
+    clearErr();
+    if (a === 'choose') return;
+    $('apply').hidden = a !== 'apply';
+    $('decline').hidden = a !== 'decline';
+    $('rec-intro').hidden = a !== 'recommend';
+    $('rec-fields').hidden = a === 'recommend' ? false : a === 'decline' ? $('rec-toggle').getAttribute('aria-expanded') !== 'true' : true;
+    $('me').hidden = a !== 'apply' || !!S.email;
+    $('me2').hidden = a === 'apply' || !!S.email;
+    var typed = $('m').value.trim() !== '';
+    $('msg-toggle').hidden = a === 'msg';
+    $('msg-toggle').textContent = a === 'recommend' ? 'Add a note about them' : 'Add a message';
+    $('msg-field').hidden = a !== 'msg' && !typed && $('msg-toggle').getAttribute('aria-expanded') !== 'true';
+    $('ml').textContent = v.ml;
+    $('go').textContent = v.btn;
+  }
+
+  function person(p) {
+    S.email = keep(p.e); S.first = keep(p.fn); S.last = keep(p.ln);
+    if (!EMAIL_RE.test(S.email)) S.email = '';
+    S.linkEmail = S.email;  // kept when the person types another address, so the office sees both
+    $('fn').value = S.first; $('ln').value = S.last;
+    if (S.email) {
+      $('who-t').textContent = 'You are answering as ' + (S.last ? 'Dr. ' + S.last + ' (' + S.email + ').' : S.email + '.');
+      $('who').hidden = false;
+    } else if (/^email$/i.test(String(p.e || '').trim()) || String(p.e || '').indexOf('$[') >= 0) {
+      $('emh').textContent = $('emh2').textContent = 'This is a test e-mail, so your e-mail is not filled in. In the real invitation it is filled in automatically.';
+    }
+  }
+  $('who-change').addEventListener('click', function () {
+    $('who').hidden = true; $('em').value = $('em2').value = S.email; S.email = '';
+    view(S.answer === 'choose' ? 'apply' : S.answer);
+    ($('me').hidden ? $('em2') : $('em')).focus();
+  });
+
+  function fill(j) {
+    if (!j || !j.ok) return broken();
+    S.journal = j.journal || ''; S.eic = j.eic || ''; S.mail = j.mail || ''; S.areas = j.areas || [];
+    $('jn').textContent = S.journal; document.title = 'Editorial board | ' + S.journal;
+    each('.jname', function (x) { x.textContent = S.journal; });
+    each('.jmail', function (x) { x.textContent = S.mail || 'info@scifiniti.com'; });
+    if (S.eic) {
+      $('eic').textContent = S.eic + ', ' + (j.eicTitle || 'Editor-in-Chief');
+      $('eic-aff').textContent = j.eicAff || '';
+      $('eic2').textContent = S.eic;
+      $('inv').hidden = S.answer !== 'choose' && S.answer !== 'apply';
+    }
+    if (j.cover && /^https:\/\//.test(j.cover)) {
+      var c = $('cover'); c.alt = S.journal + ' cover';
+      c.onerror = function () { $('coverbox').hidden = true; }; c.src = j.cover; c.hidden = false;
+    } else { $('coverbox').hidden = true; }
+    if (j.jurl && SITE.test(j.jurl)) { $('jl').href = j.jurl; $('jl').textContent = 'Visit ' + S.journal; }
+    if (j.board && SITE.test(j.board)) { $('bl').href = j.board; $('bl').hidden = false; }
+    var box = $('areas'); box.textContent = '';
+    S.areas.forEach(function (a, i) {
+      var l = document.createElement('label'); l.className = 'opt';
+      var x = document.createElement('input'); x.type = 'checkbox'; x.name = 'area'; x.value = a; x.id = 'area' + i;
+      var s = document.createElement('span'); s.textContent = a;
+      l.appendChild(x); l.appendChild(s); box.appendChild(l);
+    });
+    $('f').setAttribute('aria-busy', 'false');
+  }
+
+  // ---- files
+  function readAsBase64(blob) {
+    return new Promise(function (ok, no) {
+      var r = new FileReader();
+      r.onload = function () { ok(String(r.result).replace(/^data:[^,]*,/, '')); };
+      r.onerror = function () { no(r.error); };
+      r.readAsDataURL(blob);
+    });
+  }
+  $('cv').addEventListener('change', function () {
+    var f = this.files && this.files[0];
+    fieldErr($('cv'), '', 'cv-drop');
+    files.cv = null;
+    if (!f) { $('cv-name').textContent = 'No file chosen'; $('cv-drop').classList.remove('has'); return; }
+    var ext = f.name.toLowerCase().split('.').pop();
+    if (ext !== 'pdf' && ext !== 'docx') return fieldErr($('cv'), 'Please choose a PDF or Word (.docx) file.', 'cv-drop');
+    if (f.size > MAX_CV) return fieldErr($('cv'), 'This file is ' + size(f.size) + '. Please choose one of 5 MB or less.', 'cv-drop');
+    files.cv = f;
+    $('cv-name').innerHTML = ''; var b = document.createElement('strong'); b.textContent = f.name; $('cv-name').appendChild(b);
+    $('cv-name').appendChild(document.createTextNode(' (' + size(f.size) + ')'));
+    $('cv-drop').classList.add('has'); $('cv-btn').textContent = 'Change file';
+  });
+  $('ph').addEventListener('change', function () {
+    var f = this.files && this.files[0];
+    fieldErr($('ph'), '', 'ph-drop');
+    files.photo = null; $('ph-thumb').hidden = true;
+    if (!f) { $('ph-name').textContent = 'No photo chosen'; $('ph-drop').classList.remove('has'); listingOpt(); return; }
+    var img = new Image(), url = URL.createObjectURL(f);
+    img.onload = function () {
+      var k = Math.min(1, PHOTO_PX / Math.max(img.naturalWidth, img.naturalHeight));
+      var c = document.createElement('canvas'); c.width = Math.round(img.naturalWidth * k); c.height = Math.round(img.naturalHeight * k);
+      var g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url);
+      c.toBlob(function (blob) {
+        if (!blob) return fieldErr($('ph'), 'This photo could not be read. Please choose a JPG or PNG.', 'ph-drop');
+        files.photo = blob;   // re-drawn, so the camera details (location, device) are left behind
+        $('ph-thumb').src = URL.createObjectURL(blob); $('ph-thumb').hidden = false;
+        $('ph-name').textContent = f.name + ' (resized to ' + c.width + ' × ' + c.height + ', ' + size(blob.size) + ')';
+        $('ph-drop').classList.add('has'); $('ph-btn').textContent = 'Change photo';
+        listingOpt();
+      }, 'image/jpeg', 0.86);
+    };
+    img.onerror = function () { URL.revokeObjectURL(url); fieldErr($('ph'), 'This photo could not be read. Please choose a JPG or PNG.', 'ph-drop'); listingOpt(); };
+    img.src = url;
+  });
+  function listingOpt() { $('listing-opt').hidden = !(files.photo || $('bio').value.trim()); }
+  $('bio').addEventListener('input', function () { $('bio-c').textContent = this.value.length.toLocaleString('en') + ' of 1,000 characters'; listingOpt(); });
+
+  // ---- errors: one summary at the top with links to each field, and a message under each field
+  function fieldErr(el, text, boxId) {
+    var id = el.id + '-err', old = $(id);
+    if (old) old.remove();
+    var box = boxId ? $(boxId) : el;
+    if (!text) { el.removeAttribute('aria-invalid'); if (boxId) box.removeAttribute('aria-invalid'); return false; }
+    el.setAttribute('aria-invalid', 'true'); if (boxId) box.setAttribute('aria-invalid', 'true');
+    var p = document.createElement('span'); p.className = 'ferr'; p.id = id; p.textContent = text;
+    var anchor = el.closest('.field') || el.closest('fieldset') || el.closest('label') || el;
+    anchor.appendChild(p);
+    var d = (el.getAttribute('aria-describedby') || '').split(' ').filter(function (x) { return x && x !== id; });
+    d.push(id); el.setAttribute('aria-describedby', d.join(' '));
+    return false;
+  }
+  function clearErr() {
+    $('st').hidden = true; $('errsum').hidden = true; $('errlist').textContent = '';
+    each('.ferr', function (x) { x.remove(); });
+    each('[aria-invalid]', function (x) { x.removeAttribute('aria-invalid'); });
+  }
+  function summary(list) {
+    var ul = $('errlist'); ul.textContent = '';
+    list.forEach(function (e) {
+      var li = document.createElement('li'), a = document.createElement('a');
+      a.href = '#' + e[0].id; a.textContent = e[1];
+      a.addEventListener('click', function (ev) { ev.preventDefault(); e[0].focus(); e[0].scrollIntoView({ block: 'center' }); });
+      li.appendChild(a); ul.appendChild(li);
+      fieldErr(e[0], e[1], e[2]);
+    });
+    $('errsum').hidden = false; $('errsum').focus();
+  }
+  function idle() { busy = false; $('go').disabled = false; $('go').textContent = V[S.answer].btn; }
+
+  function send() {
+    if (busy) return;
+    clearErr();
+    var a = S.answer, errs = [];
+    var email = S.email || (a === 'apply' ? val('em') : val('em2')), emailField = a === 'apply' ? $('em') : $('em2');
+    var message = val('m');
+    var recOpen = !$('rec-fields').hidden, rn = recOpen ? val('rn') : '', re = recOpen ? val('re') : '';
+    if (!EMAIL_RE.test(email)) errs.push([emailField, 'Enter your e-mail so the editorial office can reply']);
+    if (a === 'apply') {
+      if (!val('fn')) errs.push([$('fn'), 'Enter your first name']);
+      if (!val('ln')) errs.push([$('ln'), 'Enter your last name']);
+      if (!val('pos')) errs.push([$('pos'), 'Enter your current position']);
+      if (!val('ins')) errs.push([$('ins'), 'Enter your institution']);
+      if (!val('ctry')) errs.push([$('ctry'), 'Enter your country']);
+      if (!all('area').length) errs.push([document.querySelector('input[name=area]') || $('areas-fs'), 'Choose at least one area of the journal']);
+      var orcid = val('orcid').replace(/^https?:\/\/orcid\.org\//i, '').toUpperCase();
+      if (orcid && !ORCID_RE.test(orcid)) errs.push([$('orcid'), 'Check your ORCID iD: 16 digits like 0000-0002-1825-0097']);
+      var sco = val('sco').replace(/\D/g, '');
+      if (val('sco') && !/^\d{6,15}$/.test(sco)) errs.push([$('sco'), 'Check your Scopus Author ID: 10 or 11 digits']);
+      if (val('gs') && !URL_RE.test(val('gs'))) errs.push([$('gs'), 'Paste the full address of your Google Scholar profile']);
+      if (val('pp') && !URL_RE.test(val('pp'))) errs.push([$('pp'), 'Paste the full address of your profile page']);
+      if (!files.cv) errs.push([$('cv'), 'Attach your CV (PDF or Word, up to 5 MB)', 'cv-drop']);
+      if (!$('confirm').checked) errs.push([$('confirm'), 'Confirm that you can take on the board member tasks']);
+      if (!$('privacy').checked) errs.push([$('privacy'), 'Confirm that you have read how your information is used']);
+    }
+    if (a === 'msg' && !message) errs.push([$('m'), 'Write your question']);
+    if (a === 'recommend' || rn || re) {
+      if (!rn) errs.push([$('rn'), "Enter your colleague's name"]);
+      if (!EMAIL_RE.test(re)) errs.push([$('re'), "Enter your colleague's e-mail"]);
+    }
+    if (errs.length) return summary(errs);
+    var reason = a === 'decline' ? checked('reason') : '';
+    var payload = { j: S.j, answer: a, email: email, linkEmail: S.linkEmail || '', first: a === 'apply' ? val('fn') : S.first, last: a === 'apply' ? val('ln') : S.last,
+      message: message, reason: reason, askAgain: reason === 'time' ? checked('later') : '', otherReason: reason === 'other' ? val('ot').slice(0, 200) : '',
+      recName: rn, recEmail: re, recInstitution: recOpen ? val('ri') : '', website: val('website') };
+    busy = true; $('go').disabled = true;
+    var ready = Promise.resolve();
+    if (a === 'apply') {
+      $('go').textContent = 'Sending your application and CV…';
+      Object.assign(payload, { title: checked('title'), position: val('pos'), department: val('dep'), institution: val('ins'), city: val('city'), country: val('ctry'),
+        areas: all('area'), keywords: val('kw'), orcid: val('orcid').replace(/^https?:\/\/orcid\.org\//i, '').toUpperCase(), scopus: val('sco').replace(/\D/g, ''),
+        scholar: val('gs'), profile: val('pp'), confirm: $('confirm').checked, privacy: $('privacy').checked, interests: all('interest'),
+        bio: val('bio'), listing: !$('listing-opt').hidden && $('listing').checked });
+      ready = readAsBase64(files.cv).then(function (d) { payload.cv = { name: files.cv.name, type: files.cv.type, data: d }; })
+        .then(function () { return files.photo ? readAsBase64(files.photo).then(function (d) { payload.photo = { name: 'photo.jpg', type: 'image/jpeg', data: d }; }) : null; });
+    } else { $('go').textContent = 'Sending…'; }
+    ready.then(function () {
+      return fetch(API, { method: 'POST', body: JSON.stringify(payload), credentials: 'omit', redirect: 'follow', signal: withTimeout(120000) });
+    }).then(function (r) { return r.json(); })
+      .then(function (r) {
+        if (r && r.ok) return done(payload, r);
+        idle(); $('st').textContent = (r && r.error) || 'Your answer was not sent. Please press the button again, or reply to the invitation e-mail.'; $('st').hidden = false;
+      })
+      .catch(function () { idle(); $('st').textContent = 'Your answer was not sent. Check your connection and press the button again, or reply to the invitation e-mail.'; $('st').hidden = false; });
+  }
+
+  function done(p, r) {
+    idle();
+    try { sessionStorage.removeItem('ebm_draft'); } catch (e) { /* storage blocked */ }
+    var dr = p.last ? (p.title === 'Prof.' ? 'Prof. ' : 'Dr. ') + p.last : '';
+    var lead = '', lead2 = '';
+    if (p.answer === 'apply') {
+      lead = 'Your application for the editorial board of ' + S.journal + ' has reached the editorial office.';
+      if (r.fileNote) lead2 = 'Your CV could not be stored today. Please e-mail it to ' + (S.mail || 'info@scifiniti.com') + '.';
+    }
+    if (p.answer === 'decline') {
+      lead = { field: 'We will not invite you to this board again.', boards: 'Thank you for letting us know.' }[p.reason] || 'Your answer is recorded.';
+      if (p.reason === 'time') lead = r.until ? 'We will not write to you about the board before ' + r.until + '.' : 'Your answer is recorded.';
+      if (p.recName) lead2 = 'We will contact ' + p.recName + '.';
+    }
+    if (p.answer === 'recommend') lead = 'We will check the fit and contact ' + p.recName + '.';
+    if (p.answer === 'msg') lead = 'The editorial office will reply to ' + p.email + ' within 2 working days.';
+    $('dh').textContent = { apply: dr ? 'Thank you, ' + dr : 'Thank you', decline: 'Thank you for letting us know',
+      recommend: 'Thank you for the recommendation', msg: 'Question sent' }[p.answer];
+    $('dl').textContent = lead;
+    $('dl2').textContent = lead2; $('dl2').hidden = !lead2;
+    $('next').hidden = p.answer !== 'apply';
+    $('form-view').hidden = true;
+    var d = $('done'); d.hidden = false; d.classList.remove('pop'); void d.offsetWidth; d.classList.add('pop');
+    window.scrollTo(0, 0); $('dh').focus();
+  }
+
+  function broken() {
+    $('form-view').hidden = true; $('check').hidden = true;
+    $('dh').textContent = 'This link is incomplete';
+    $('dl').textContent = 'Please reply to the invitation e-mail instead. Your reply reaches the same editorial office.';
+    $('done').hidden = false;
+  }
+
+  // ---- a draft of the typed text survives a reload of this tab (files do not)
+  var DRAFT = ['fn', 'ln', 'pos', 'ins', 'dep', 'city', 'ctry', 'kw', 'orcid', 'sco', 'gs', 'pp', 'bio', 'm', 'rn', 're', 'ri', 'ot'];
+  function saveDraft() { try { var o = {}; DRAFT.forEach(function (k) { o[k] = $(k).value; }); sessionStorage.setItem('ebm_draft', JSON.stringify(o)); } catch (e) { /* storage blocked */ } }
+  function loadDraft() { try { var o = JSON.parse(sessionStorage.getItem('ebm_draft') || '{}'); DRAFT.forEach(function (k) { if (o[k] && !$(k).value) $(k).value = o[k]; }); } catch (e) { /* storage blocked */ } }
+  DRAFT.forEach(function (k) { $(k).addEventListener('input', saveDraft); });
+
+  $('msg-toggle').addEventListener('click', function () {
+    var open = this.getAttribute('aria-expanded') !== 'true';
+    this.setAttribute('aria-expanded', String(open)); $('msg-field').hidden = !open;
+    if (open) $('m').focus();
+  });
+  $('rec-toggle').addEventListener('click', function () {
+    var open = this.getAttribute('aria-expanded') !== 'true';
+    this.setAttribute('aria-expanded', String(open)); $('rec-fields').hidden = !open;
+    if (open) $('rn').focus();
+  });
+  each('input[name=reason]', function (r) {
+    r.addEventListener('change', function () { $('later').hidden = checked('reason') !== 'time'; $('other-field').hidden = checked('reason') !== 'other'; });
+  });
+  each('[data-go]', function (b) { b.addEventListener('click', function () { view(b.getAttribute('data-go')); $('h').scrollIntoView({ block: 'start' }); $('h').focus(); }); });
+  $('h').setAttribute('tabindex', '-1');
+  $('back').addEventListener('click', function () { view('choose'); $('h').scrollIntoView({ block: 'start' }); $('h').focus(); });
+  $('f').addEventListener('submit', function (e) { e.preventDefault(); send(); });
+  // a corrected field loses its error message at once (the areas share one message on the first box)
+  ['input', 'change'].forEach(function (t) { $('f').addEventListener(t, function (e) {
+    var x = e.target.name === 'area' ? document.querySelector('input[name=area]') : e.target;
+    if (x && x.getAttribute('aria-invalid') === 'true' && x.type !== 'file') fieldErr(x, '');
+  }); });
+  var dl = $('countries'); COUNTRIES.forEach(function (c) { var o = document.createElement('option'); o.value = c; dl.appendChild(o); });
+  each('.dtime', function (x) { x.textContent = DECISION; });
+
+  var q = parse(location.search), h = parse(location.hash);
+  var p = { a: q.a, j: q.j, e: h.e || q.e, fn: h.fn || q.fn, ln: h.ln || q.ln };
+  S.j = CODE_RE.test(p.j || '') ? p.j : '';
+  if (!S.j) return broken();
+  person(p);
+  loadDraft();
+  view({ apply: 'apply', decline: 'decline', recommend: 'recommend', msg: 'msg' }[p.a] || 'choose');
+  $('f').setAttribute('aria-busy', 'true');
+  fetch(API + '?api=journal&j=' + encodeURIComponent(S.j), { credentials: 'omit', redirect: 'follow', signal: withTimeout(20000) })
+    .then(function (r) { return r.json(); }).then(fill).catch(function () {
+      $('st').textContent = 'The form could not load. Please refresh the page, or reply to the invitation e-mail.'; $('st').hidden = false; $('f').hidden = false; $('apply').hidden = true;
+    });
+})();
+</script>
+</body>
+</html>
